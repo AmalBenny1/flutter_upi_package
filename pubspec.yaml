@@ -1,0 +1,41 @@
+name: flutter_upi_pay
+description: Create app with UPI (Unified Payments Interface)
+version: 0.2.1
+
+
+environment:
+  sdk: '>=3.1.5 <4.0.0'
+  flutter: '>=3.3.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  assets:
+    - images/
+  plugin:
+    platforms:
+      android:
+        package: com.payment.flutter_upi_pay
+        pluginClass: FlutterPayUpiPlugin
+      ios:
+        pluginClass: FlutterPayUpiPlugin
+      linux:
+        pluginClass: FlutterPayUpiPlugin
+      macos:
+        pluginClass: FlutterPayUpiPlugin
+      windows:
+        pluginClass: FlutterPayUpiPluginCApi
+      web:
+        pluginClass: FlutterPayUpiWeb
+        fileName: flutter_pay_upi_web.dart
+
